@@ -5,6 +5,7 @@ SET(CMAKE_MODULE_PATH ${CMAKE_INSTALL_PREFIX}/lib/cmake/ )
 
 find_package(catkin REQUIRED
              roscpp
+             roslib
              cv_bridge)
 find_package(aruco REQUIRED )
 include_directories(include ${aruco_INCLUDE_DIR})

@@ -7,13 +7,13 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="rizi@todo.todo">rizi</maintainer>
+  <maintainer email="12beerasif@seecs.edu.pk">Rizwan Asif</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>BSD</license>
 
 
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
@@ -46,7 +46,13 @@
   
   <build_depend>aruco</build_depend>
   <run_depend>aruco</run_depend>
-
+  
+  <build_depend>roslib</build_depend>
+  <run_depend>roslib</run_depend>
+  
+  <build_depend>pluginlib</build_depend>
+  <run_depend>pluginlib</run_depend>
+  
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

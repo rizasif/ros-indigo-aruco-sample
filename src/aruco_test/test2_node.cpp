@@ -16,6 +16,8 @@ int main(int argc, char** argv)
 	spinner.start();
 
 	ros::NodeHandle node_handle;
+    
+    std::string filepath =  ros::package::getPath("aruco_test");
 
     try
     {
@@ -23,7 +25,9 @@ int main(int argc, char** argv)
         vector<aruco::Marker> Markers;
         //read the input image
         cv::Mat InImage;
-        InImage=cv::imread("/home/rizi/ros_stuff/aruco_ws/src/aruco_test/markerprecise/pic0.jpg");
+        //InImage=cv::imread("/home/rizi/ros_stuff/aruco_ws/src/aruco_test/markerprecise/pic0.jpg");
+        std::string fileloc = filepath + "/markerprecise/pic0.jpg";
+        InImage=cv::imread(fileloc);
     	//Ok, let's detect
         MDetector.detect(InImage,Markers);
         
@@ -31,7 +35,9 @@ int main(int argc, char** argv)
         vector<aruco::Marker> Markers2;
         //read the input image
         cv::Mat InImage2;
-        InImage2=cv::imread("/home/rizi/ros_stuff/aruco_ws/src/aruco_test/markerprecise/pic6.jpg");
+        //InImage2=cv::imread("/home/rizi/ros_stuff/aruco_ws/src/aruco_test/markerprecise/pic6.jpg");
+        fileloc = filepath + "/markerprecise/pic6.jpg";
+        InImage2=cv::imread(fileloc);
     	//Ok, let's detect
         MDetector2.detect(InImage2,Markers2);
         
